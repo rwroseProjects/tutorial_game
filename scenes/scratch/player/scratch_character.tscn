@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfti7ks3jw3yy"]
+
+[ext_resource type="Script" uid="uid://d7rcwgib3it2" path="res://src/entity/player_entity/player_entity.gd" id="1_owfqb"]
+[ext_resource type="Texture2D" uid="uid://d0hgyrnqihxio" path="res://icon.svg" id="2_g4xyd"]
+
+[node name="ScratchCharacter" type="CharacterBody2D"]
+script = ExtResource("1_owfqb")
+metadata/_custom_type_script = "uid://d7rcwgib3it2"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g4xyd")
