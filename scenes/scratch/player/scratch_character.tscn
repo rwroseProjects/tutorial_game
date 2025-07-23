@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfti7ks3jw3yy"]
+[gd_scene load_steps=4 format=3 uid="uid://cfti7ks3jw3yy"]
 
-[ext_resource type="Script" uid="uid://d7rcwgib3it2" path="res://src/entity/player_entity/player_entity.gd" id="1_owfqb"]
+[ext_resource type="Script" uid="uid://vfkv31ty0rs7" path="res://src/entity/entity.gd" id="1_fao2f"]
 [ext_resource type="Texture2D" uid="uid://d0hgyrnqihxio" path="res://icon.svg" id="2_g4xyd"]
+[ext_resource type="Script" uid="uid://cd7qt4ypbl3e6" path="res://src/components/player_components/control_component.gd" id="3_qb128"]
 
 [node name="ScratchCharacter" type="CharacterBody2D"]
-script = ExtResource("1_owfqb")
+script = ExtResource("1_fao2f")
 metadata/_custom_type_script = "uid://d7rcwgib3it2"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_g4xyd")
+
+[node name="ControlComponent" type="Node2D" parent="." node_paths=PackedStringArray("focus_entity")]
+script = ExtResource("3_qb128")
+focus_entity = NodePath("..")
+metadata/_custom_type_script = "uid://cd7qt4ypbl3e6"
