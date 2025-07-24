@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfti7ks3jw3yy"]
+[gd_scene load_steps=5 format=3 uid="uid://cfti7ks3jw3yy"]
 
 [ext_resource type="Script" uid="uid://vfkv31ty0rs7" path="res://src/entity/entity.gd" id="1_fao2f"]
 [ext_resource type="Texture2D" uid="uid://d0hgyrnqihxio" path="res://icon.svg" id="2_g4xyd"]
 [ext_resource type="Script" uid="uid://cd7qt4ypbl3e6" path="res://src/components/player_components/control_component.gd" id="3_qb128"]
+[ext_resource type="Script" uid="uid://cdigthwhwjg2d" path="res://src/components/player_components/blaster_component.gd" id="4_qb128"]
 
 [node name="ScratchCharacter" type="CharacterBody2D"]
 script = ExtResource("1_fao2f")
@@ -15,3 +16,8 @@ texture = ExtResource("2_g4xyd")
 script = ExtResource("3_qb128")
 focus_entity = NodePath("..")
 metadata/_custom_type_script = "uid://cd7qt4ypbl3e6"
+
+[node name="BlasterComponent" type="Node2D" parent="."]
+position = Vector2(3, -1)
+script = ExtResource("4_qb128")
+metadata/_custom_type_script = "uid://cdigthwhwjg2d"
